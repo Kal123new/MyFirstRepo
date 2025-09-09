@@ -1,0 +1,45 @@
+print("Hello World")
+
+
+
+
+print("Q1:", 7 // 3)  # 2.0
+
+# Question 2
+print("Q2:", 7 / 2)   # 3.5
+
+# Question 3
+print("Q3:", 3 ** 2)  #  9
+
+# Question 4
+print("Q4:", len('mango') < len('avocado'))  # True
+
+# Question 5
+print("Q5:", 3 > 2 and 4 < 3)  # False
+
+# Question 6
+print("Q6:", not 3 > 2)  # False
+
+# Question 7
+text = 'Python'
+print("Q7:", text[::2])  # cuts out a letter every 2 so Pto
+
+# Question 8
+print("Q8a:", 'A' in 'Asabeneh')  # True
+print("Q8b:", 'B' in 'Asabeneh')  # False
+
+# Question 9
+mass = 75
+gravity = 9.81
+weight = mass * gravity
+print("Q9:", weight)  # 735.75
+
+# Question 10
+num_one = 3
+num_two = 4
+total = num_one + num_two
+diff = num_two - num_one
+product = num_one * num_two
+div = num_two / num_two
+remainder = num_two % num_one
+print("Q10:", total, diff, product, div, remainder)  # 7, 1, 12, 1.0, 1
