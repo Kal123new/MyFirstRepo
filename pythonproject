@@ -43,3 +43,31 @@ product = num_one * num_two
 div = num_two / num_two
 remainder = num_two % num_one
 print("Q10:", total, diff, product, div, remainder)  # 7, 1, 12, 1.0, 1
+
+
+
+fruit = "banana"
+result = fruit.replace("a", "A")
+print(result)
+
+
+text = "Hello, World!"
+index = text.find("o")
+print(index)
+
+
+string = "   Hello, World!    "
+index2 = string.lower().strip()
+print(index2)
+
+original_price = 150
+tax_rate = 12
+final_price = original_price + (original_price * tax_rate / 100)
+print(final_price)
+
+string2 = "I love Python programming"
+print(string2[7:13])
+
+
+string3 = "OpenAI"
+print(string3[::-1])
