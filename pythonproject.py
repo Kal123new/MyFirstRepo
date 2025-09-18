@@ -1,73 +1,103 @@
-print("Hello World")
+
+
+##############
+
+
+# Python Exercises: Nested Loops and Lists
+
+# ---
+# Exercise 1: Matrix Sum
+# ---
+# Task: Write a function that takes a 2D list (a list of lists) of numbers
+# and returns the sum of all its elements.
+#
+# Example:
+matrix = [
+[1, 2, 3],
+[4, 5, 6],
+[7, 8, 9]
+ ]
+# Expected Output: 45
+# ---
+
+
+    # Your code here
+
+sum = 0
+
+for i in matrix:
+    for value in i:
+        sum += value
+
+print(sum)
+
+    # Test the function
+
+
+# ---
+# Exercise 2: Find the First Duplicate
+# ---
+# Task: Write a function that finds the first integer that appears more than once
+# in a list. Use nested loops to compare each element with every other element.
+#
+# Example:
+items = [2, 5, 1, 2, 3, 5, 1, 2, 4]
+# Expected Output: 2
+# ---
+
+
+found = False
+for nums in range(len(items)):
+    index = nums + 1
+    for i in range(index, len(items)):
+        if items[nums] == items[i]:
+            print(items[nums])
+            found = True
+            break
+    if found == True:
+        break
 
 
 
+# ---
+# Exercise 4: Flatten a 2D List
+# ---
+# Task: Write a function that takes a 2D list and returns a single
+# "flattened" list containing all the elements from the original nested lists.
+#
+# Example:
+nested_list = [['a', 'b', 'c'], ['d', 'e'], ['f']]
+ # flat_list = ['a', 'b', 'c', 'd', 'e', 'f']
+# ---
 
-print("Q1:", 7 // 3)  # 2.0
-
-# Question 2
-print("Q2:", 7 / 2)   # 3.5
-
-# Question 3
-print("Q3:", 3 ** 2)  #  9
-
-# Question 4
-print("Q4:", len('mango') < len('avocado'))  # True
-
-# Question 5
-print("Q5:", 3 > 2 and 4 < 3)  # False
-
-# Question 6
-print("Q6:", not 3 > 2)  # False
-
-# Question 7
-text = 'Python'
-print("Q7:", text[::2])  # cuts out a letter every 2 so Pto
-
-# Question 8
-print("Q8a:", 'A' in 'Asabeneh')  # True
-print("Q8b:", 'B' in 'Asabeneh')  # False
-
-# Question 9
-mass = 75
-gravity = 9.81
-weight = mass * gravity
-print("Q9:", weight)  # 735.75
-
-# Question 10
-num_one = 3
-num_two = 4
-total = num_one + num_two
-diff = num_two - num_one
-product = num_one * num_two
-div = num_two / num_two
-remainder = num_two % num_one
-print("Q10:", total, diff, product, div, remainder)  # 7, 1, 12, 1.0, 1
+    
+    # Your code here
+flat_list = []
+for i in nested_list:
+    for index in i:
+        flat_list.append(index)
+print(flat_list)
+# Test the function
 
 
+# ---
+# Exercise 5: Find Common Elements
+# ---
+# Task: Write a function that returns a new list containing elements that are
+# present in *both* list1 and list2. Do not include duplicates in the result.
+#
+# Example:
+list1 = [1, 2, 3, 4, 5]
+list2 = [4, 5, 6, 7, 8]
+# Expected Output: [4, 5]
+# ---
 
-fruit = "banana"
-result = fruit.replace("a", "A")
-print(result)
-
-
-text = "Hello, World!"
-index = text.find("o")
-print(index)
-
-
-string = "   Hello, World!    "
-index2 = string.lower().strip()
-print(index2)
-
-original_price = 150
-tax_rate = 12
-final_price = original_price + (original_price * tax_rate / 100)
-print(final_price)
-
-string2 = "I love Python programming"
-print(string2[7:13])
+    # Your code here
+common_elements = []
+for item in list1:
+    if item in list2 and item not in common_elements:
+        common_elements.append(item)
+print(common_elements)
 
 
-string3 = "OpenAI"
-print(string3[::-1])
+# Test the function
