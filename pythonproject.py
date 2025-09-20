@@ -100,4 +100,7 @@ for item in list1:
 print(common_elements)
 
 
+print ("heyyy")
+
+
 # Test the function
