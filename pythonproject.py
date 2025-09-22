@@ -23,13 +23,13 @@ matrix = [
 
     # Your code here
 
-sum = 0
-
-for i in matrix:
-    for value in i:
-        sum += value
-
-print(sum)
+def matrix_sum(matrix):
+    total = 0
+    for row in matrix:
+        for value in row:
+            total += value
+    return total
+print(matrix_sum(matrix))
 
     # Test the function
 
@@ -45,18 +45,13 @@ items = [2, 5, 1, 2, 3, 5, 1, 2, 4]
 # Expected Output: 2
 # ---
 
-
-found = False
-for nums in range(len(items)):
-    index = nums + 1
-    for i in range(index, len(items)):
-        if items[nums] == items[i]:
-            print(items[nums])
-            found = True
-            break
-    if found == True:
-        break
-
+def find_first_duplicate(items):
+    for i in range(len(items)):
+        for j in range(i + 1, len(items)):
+            if items[i] == items[j]:
+                return items[i]
+    return None
+print(find_first_duplicate(items))
 
 
 # ---
@@ -72,13 +67,13 @@ nested_list = [['a', 'b', 'c'], ['d', 'e'], ['f']]
 
     
     # Your code here
-flat_list = []
-for i in nested_list:
-    for index in i:
-        flat_list.append(index)
-print(flat_list)
-# Test the function
-
+def flatten_list(nested_list):
+    flat_list = []
+    for sublist in nested_list:
+        for item in sublist:
+            flat_list.append(item)
+    return flat_list
+print(flatten_list(nested_list))
 
 # ---
 # Exercise 5: Find Common Elements
@@ -93,11 +88,13 @@ list2 = [4, 5, 6, 7, 8]
 # ---
 
     # Your code here
-common_elements = []
-for item in list1:
-    if item in list2 and item not in common_elements:
-        common_elements.append(item)
-print(common_elements)
+def common_elements(list1, list2):
+    result = []
+    for item in list1:
+        if item in list2 and item not in result:
+            result.append(item)
+    return result
+print(common_elements(list1, list2))
 
 
 # Test the function
