@@ -97,4 +97,7 @@ def common_elements(list1, list2):
 print(common_elements(list1, list2))
 
 
+print ("heyyy")
+
+
 # Test the function
